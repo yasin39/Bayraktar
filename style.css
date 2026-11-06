@@ -564,9 +564,7 @@ textarea:focus-visible {
 }
 
 .contact-inner {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 4rem;
+    max-width: 640px;
 }
 
 .contact-details {
@@ -595,78 +593,14 @@ textarea:focus-visible {
     color: var(--color-text);
 }
 
-.contact-form {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+.btn-whatsapp {
+    margin-top: 2rem;
+    background-color: #25D366;
+    color: #FFFFFF;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-group label {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--color-text);
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    transition: border-color 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-accent);
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.form-group.has-error input,
-.form-group.has-error textarea {
-    border-color: #C0392B;
-}
-
-.form-error {
-    display: none;
-    font-size: 0.8rem;
-    color: #C0392B;
-}
-
-.form-group.has-error .form-error {
-    display: block;
-}
-
-.contact-form .btn {
-    align-self: flex-start;
-}
-
-.form-success {
-    display: none;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: #2E7D32;
-    background-color: rgba(46, 125, 50, 0.08);
-    border: 1px solid rgba(46, 125, 50, 0.3);
-    padding: 0.85rem 1rem;
-    border-radius: var(--radius-sm);
-}
-
-.form-success.is-visible {
-    display: block;
+.btn-whatsapp:hover {
+    background-color: #1EBE5A;
 }
 
 /* ==========================================================================
@@ -721,8 +655,7 @@ textarea:focus-visible {
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 960px) {
-    .about-inner,
-    .contact-inner {
+    .about-inner {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
@@ -807,10 +740,6 @@ textarea:focus-visible {
 
     .stat-number {
         font-size: 2rem;
-    }
-
-    .contact-form {
-        padding: 1.75rem;
     }
 
     .hero-actions {
